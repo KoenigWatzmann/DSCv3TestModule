@@ -76,7 +76,7 @@ function Test-DSC([Model]$InputObj){
     }
     Else{
         $Model.File.Path = $InputObj.File.Path
-        $Model.Ensure = 'Absent'
+        $Model.State = 'Absent'
     }
     return $Model.ConvertToInputScheme()
 }
